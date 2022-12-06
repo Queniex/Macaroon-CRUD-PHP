@@ -76,7 +76,7 @@
                 <div class="w-[70%] bg-white h-[12vh] border-black border-2 rounded-[80px] mt-4 mb-4 flex">
                     <div class="w-[70%] h-[12vh] rounded-l-[80px] flex">
                         <div class="ml-20 w-[20%] h-[12vh]"> 
-                            <img style="height: 100%; width: 100%; object-fit: contain" src="images/macaroon.png" alt="">
+                            <img style="height: 100%; width: 100%; object-fit: contain" src="../images/macaroon.png" alt="">
                         </div>
                         <span style="-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: black;" class="h-8 mt-2 text-[40px] font-bold text-[#F3E850]"><span class="text-[#FF0095]">Macaroon</span>mart</span>
                     </div>
@@ -87,12 +87,12 @@
                               <div class="dropdown dropdown-end">
                                 <label tabindex="0" class="btn bg-[#FFE898] text-black hover:text-white rounded-btn">Menu</label>
                                 <ul tabindex="0" class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
-                                  <li><a href="index.php">Dashboard</a></li> 
-                                  <li><a href="read.php">Data</a></li>
+                                  <li><a href="dashboard.html">Dashboard</a></li> 
+                                  <li><a href="data.html">Data</a></li>
                                 </ul>
                               </div>
 
-                              <a href="logout.php" class="ml-2 btn bg-[black] text-white hover:text-[pink] rounded-btn">Log Out</a>
+                              <a href="../login.php" class="ml-2 btn bg-[black] text-white hover:text-[pink] rounded-btn">Log Out</a>
 
                             </div>
                           </div>
@@ -139,21 +139,45 @@
                         <tbody>
         
                         <!-- Mulai Perulangan -->
-                        <?php foreach( $item as $itm ) : ?>
                             <tr>
-                                <td class="tg-wp8o"><span style="background-color:pink"><?= $itm["id_nama"]; ?></span></td>
-                                <td class="tg-wp8o"><?= $itm["nama"]; ?></td>
-                                <td class="tg-wp8o"><?= $itm["hp"]; ?></td>
-                                <td class="tg-wp8o"><?= $itm["nama_barang"]; ?></td>
-                                <td class="tg-wp8o"><?= $itm["harga"]; ?></td>
-                                <td class="tg-wp8o"><?= $itm["total"]; ?></td>
+                                <td class="tg-wp8o"><span style="background-color:pink">1</span></td>
+                                <td class="tg-wp8o">Quenie Salbiyah</td>
+                                <td class="tg-wp8o">0811121345</td>
+                                <td class="tg-wp8o">Bundle 1</td>
+                                <td class="tg-wp8o">Rp 18.000</td>
+                                <td class="tg-wp8o">Rp 54.000</td>
+                                    <td class="tg-0lax"><a href="read.html" class="btn bg-white hover:bg-[pink]" name="baca"><img width="20px" height="20px" src="../images/eye.png" alt=""></a></td>
+                                    <td class="tg-0lax"><a href="edit.html" class="btn bg-white hover:bg-[pink]" name="baca"><img width="20px" height="20px" src="../images/pen.png" alt=""></a></td>
+                                    <td class="tg-0lax"><button class="btn bg-white hover:bg-[pink]" name="baca" type="button" data-modal-toggle="popup-modal"><img width="20px" height="20px" src="../images/delete.png" alt=""></button></td>
+                            </tr>  
+
+                            <tr>
+                                <td class="tg-wp8o"><span style="background-color:pink">2</span></td>
+                                <td class="tg-wp8o">Quenie Salbiyah</td>
+                                <td class="tg-wp8o">0811121345</td>
+                                <td class="tg-wp8o">Bundle 2</td>
+                                <td class="tg-wp8o">Rp 17.000</td>
+                                <td class="tg-wp8o">Rp 51.000</td>
                                 <form action="GET"></form>
-                                    <td class="tg-0lax"><a href="seek.php?id=<?= $itm["id_nama"]; ?>" class="btn bg-white hover:bg-[pink]" name="baca"><img width="20px" height="20px" src="images/eye.png" alt=""></a></td>
-                                    <td class="tg-0lax"><a href="edit.php?id=<?= $itm["id_nama"]; ?>" class="btn bg-white hover:bg-[pink]" name="baca"><img width="20px" height="20px" src="images/pen.png" alt=""></a></td>
-                                    <td class="tg-0lax"><button href="delete.php?id=<?= $itm["id_nama"]; ?>" class="btn bg-white hover:bg-[pink]" name="baca" type="button" data-modal-toggle="popup-modal"><img width="20px" height="20px" src="images/delete.png" alt=""></button></td>
+                                    <td class="tg-0lax"><a class="btn bg-white hover:bg-[pink]" name="baca"><img width="20px" height="20px" src="../images/eye.png" alt=""></a></td>
+                                    <td class="tg-0lax"><a class="btn bg-white hover:bg-[pink]" name="baca"><img width="20px" height="20px" src="../images/pen.png" alt=""></a></td>
+                                    <td class="tg-0lax"><button class="btn bg-white hover:bg-[pink]" name="baca" type="button" data-modal-toggle="popup-modal"><img width="20px" height="20px" src="../images/delete.png" alt=""></button></td>
                                 </form>
-                            </tr>
-                        <?php endforeach; ?>    
+                            </tr> 
+
+                            <tr>
+                                <td class="tg-wp8o"><span style="background-color:pink">3</span></td>
+                                <td class="tg-wp8o">Quenie Salbiyah</td>
+                                <td class="tg-wp8o">0811121345</td>
+                                <td class="tg-wp8o">Bundle 1</td>
+                                <td class="tg-wp8o">Rp 18.000</td>
+                                <td class="tg-wp8o">Rp 54.000</td>
+                                <form action="GET"></form>
+                                    <td class="tg-0lax"><a class="btn bg-white hover:bg-[pink]" name="baca"><img width="20px" height="20px" src="../images/eye.png" alt=""></a></td>
+                                    <td class="tg-0lax"><a class="btn bg-white hover:bg-[pink]" name="baca"><img width="20px" height="20px" src="../images/pen.png" alt=""></a></td>
+                                    <td class="tg-0lax"><button class="btn bg-white hover:bg-[pink]" name="baca" type="button" data-modal-toggle="popup-modal"><img width="20px" height="20px" src="../images/delete.png" alt=""></button></td>
+                                </form>
+                            </tr> 
                         <!--Akhir perulangan  -->
                         </tbody>
                     </table>
@@ -164,21 +188,12 @@
             <div class="h-[15vh]">
                 <!-- Navigation -->
                 <div class="btn-group flex justify-center">
-                    <?php if( $activePage > 1 ) : ?>
                         <a class="btn bg-[pink] text-black hover:text-white" href="?page=<?= $activePage - 1; ?>">«</a>
-                    <?php endif; ?> 
                     
-                    <?php for( $i = 1; $i <= $totalPage; $i++ ) : ?>
-                        <?php if( $i == $activePage ) : ?>
-                            <a class="btn bg-[pink] text-black hover:text-white" href="?page=<?= $i; ?>"><?= $i; ?></a>
-                        <?php else : ?>
-                            <a class="btn bg-[pink] text-black hover:text-white" href="?page=<?= $i; ?>"><?= $i; ?></a>
-                        <?php endif; ?>
-                    <?php endfor; ?>
+                            <a class="btn bg-[pink] text-black hover:text-white" href="?page=<?= $i; ?>">1</a>
+                            <a class="btn bg-[pink] text-black hover:text-white" href="?page=<?= $i; ?>">2</a>
 
-                    <?php if( $activePage < $totalPage ) : ?>
                         <a class="btn bg-[pink] text-black hover:text-white" href="?page=<?= $activePage + 1; ?>">»</a>
-                    <?php endif; ?>
                 </div>         
             <!-- End Navigation -->
             </div>
@@ -199,7 +214,7 @@
                 <div class="p-6 bg-white rounded-lg text-center">
                     <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Anda yakin akan menghapus data ini?</h3>
-                    <a href="delete.php?id=<?= $itm["id_nama"]; ?>" data-modal-toggle="popup-modal" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                    <a data-modal-toggle="popup-modal" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                     Ya
                     </a>
                     <button data-modal-toggle="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
