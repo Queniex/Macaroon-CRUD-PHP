@@ -63,7 +63,7 @@
                 <div class="w-[70%] bg-white h-[12vh] border-black border-2 rounded-[80px] mt-4 mb-4 flex">
                     <div class="w-[70%] h-[12vh] rounded-l-[80px] flex">
                         <div class="ml-20 w-[20%] h-[12vh]"> 
-                            <img style="height: 100%; width: 100%; object-fit: contain" src="images/macaroon.png" alt="">
+                            <img style="height: 100%; width: 100%; object-fit: contain" src="../images/macaroon.png" alt="">
                         </div>
                         <span style="-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: black;" class="h-8 mt-2 text-[40px] font-bold text-[#F3E850]"><span class="text-[#FF0095]">Macaroon</span>mart</span>
                     </div>
@@ -74,12 +74,12 @@
                               <div class="dropdown dropdown-end">
                                 <label tabindex="0" class="btn bg-[#FFE898] text-black hover:text-white rounded-btn">Menu</label>
                                 <ul tabindex="0" class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
-                                  <li><a href="index.php">Dashboard</a></li> 
-                                  <li><a href="read.php">Data</a></li>
+                                  <li><a href="dashboard.html">Dashboard</a></li> 
+                                  <li><a href="data.html">Data</a></li>
                                 </ul>
                               </div>
 
-                              <a href="logout.php" class="ml-2 btn bg-[black] text-white hover:text-[pink] rounded-btn">Log Out</a>
+                              <a href="../index.html" class="ml-2 btn bg-[black] text-white hover:text-[pink] rounded-btn">Log Out</a>
 
                             </div>
                           </div>
@@ -101,19 +101,19 @@
 
                 <div class="card border-solid border-black border-2 mt-8 mb-3 bg-[white]" style="max-width: 30rem;">
                     <div class="border-solid border-black border-b-[1px] bg-[pink] card-header flex justify-center">
-                        <h1 class="m-3 modal-title fs-5" id="beli" style="color: rgb(0, 0, 0); text-decoration: underline;text-decoration-color: rgb(255, 87, 213);  ">Data Pelanggan 🛒 || <span>(<?= $item["tgl_transaksi"]; ?>)</span></h1></div>
+                        <h1 class="m-3 modal-title fs-5" id="beli" style="color: rgb(0, 0, 0); text-decoration: underline;text-decoration-color: rgb(255, 87, 213);  ">Data Pelanggan 🛒 || <span>(9-13-2022)</span></h1></div>
                     <div class="card-body text-dark -mb-3">
                       <p class="card-text -mt-5">
-                        <div>Nama Pelanggan : <span><?= $item["nama"]; ?></span></div>
-                        <div>Hp Pelanggan : <span><?= $item["hp"]; ?></span></div>
-                        <div>Alamat Pelanggan : <span><?= $item["alamat"]; ?></span></div>
+                        <div>Nama Pelanggan : <span>Quenie Salbiyah</span></div>
+                        <div>Hp Pelanggan : <span>0811121345</span></div>
+                        <div>Alamat Pelanggan : <span>Jalan Angkasa Raya</span></div>
                         <hr>
-                        <div>Barang Terbeli : <span><?= $item["nama_barang"]; ?></span></div>
-                        <div>Jenis Barang : <span><?= $item["jenis_barang"]; ?></span></div>
-                        <div>Harga Barang : <span><?= $item["harga"]; ?></span></div>
-                        <div>Jumlah Barang : <span><?= $item["jumlah"]; ?></span></div>
+                        <div>Barang Terbeli : <span>Bundle 1</span></div>
+                        <div>Jenis Barang : <span>Makanan</span></div>
+                        <div>Harga Barang : <span>Rp 18.000</span></div>
+                        <div>Jumlah Barang : <span>3</span></div>
                         <hr>
-                        <div>Total Harga : <span style="background-color: #b900b9;"><?= $item["total"]; ?></span></div>
+                        <div>Total Harga : <span style="background-color: #b900b9;">Rp 54.000</span></div>
                       </p>
                     </div>
                   </div>
