@@ -63,7 +63,7 @@
                 <div class="w-[70%] bg-white h-[12vh] border-black border-2 rounded-[80px] mt-4 mb-4 flex">
                     <div class="w-[70%] h-[12vh] rounded-l-[80px] flex">
                         <div class="ml-20 w-[20%] h-[12vh]"> 
-                            <img style="height: 100%; width: 100%; object-fit: contain" src="images/macaroon.png" alt="">
+                            <img style="height: 100%; width: 100%; object-fit: contain" src="../images/macaroon.png" alt="">
                         </div>
                         <span style="-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: black;" class="h-8 mt-2 text-[40px] font-bold text-[#F3E850]"><span class="text-[#FF0095]">Macaroon</span>mart</span>
                     </div>
@@ -101,21 +101,17 @@
                 <form class="w-full max-w-lg" method="POST">
                     <div class="flex flex-wrap -mx-3 mb-3">
                       <div class="w-full md:w-1/2 px-3 mb-3 md:mb-0">
-                        
-                        <div>
-                            <input type="hidden" name="id" value="<?= $item["id_nama"]; ?>">
-                        </div>
 
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="nama_pembeli">
                           Nama Pelanggan
                         </label>
-                        <input class="border border-black appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"  type="text" value="<?= $item["nama"]; ?>" id="nama_pembeli" name="nama_pembeli" required>
+                        <input class="border border-black appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"  type="text" value="Quenie Salbiyah" id="nama_pembeli" name="nama_pembeli" required>
                       </div>
                       <div class="w-full md:w-1/2 px-3">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="hp">
                           Nomor HP
                         </label>
-                        <input class="border border-black appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value="<?= $item["hp"]; ?>" id="hp" name="hp" required>
+                        <input class="border border-black appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value="0811121345" id="hp" name="hp" required>
                       </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-3">
@@ -123,7 +119,7 @@
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="alamat">
                           Alamat
                         </label>
-                        <input class="border border-black appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value="<?= $item["alamat"]; ?>" id="alamat" name="alamat" required>
+                        <input class="border border-black appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value="Jalan Angkasa Raya" id="alamat" name="alamat" required>
                       </div>
                     </div>
 
@@ -135,10 +131,7 @@
                             <div class="relative">
                               <select name="id_barang" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
 
-                              <option for="grid-state" value=<?= $item['id_barang']; ?>> <?= $item['nama_barang']; ?> </option>
-                              <?php foreach( $barang as $itm ) : ?>
-                                    <option id="barang" value=<?= $itm['id_barang']; ?>> <?= $itm['nama_barang']; ?> </option>
-                              <?php endforeach; ?> 
+                              <option for="grid-state" value=<?= $item['id_barang']; ?> Bundle 1 </option>
                               </select>
                               <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -152,10 +145,7 @@
                             </label>
                             <div class="relative">
                             <select name="harga" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-                            <option for="grid-state" value=<?= $item['harga']; ?>> <?= $item['harga']; ?> </option>
-                            <?php foreach( $barang as $itm ) : ?>
-                                <option id="barang" value=<?= $itm['harga_barang']; ?>> <?= $itm['harga_barang']; ?> </option>
-                            <?php endforeach; ?>  
+                            <option for="grid-state" value=<?= $item['harga']; ?> Rp 18.000 </option>
                             </select>
                             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -168,18 +158,18 @@
                               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="jumlah">
                                 Kuantitas
                               </label>
-                              <input class="border border-black appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" value="<?= $item["jumlah"]; ?>" id="jumlah" name="jumlah" required type="text" >
+                              <input class="border border-black appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" value="3" id="jumlah" name="jumlah" required type="text" >
                             </div>
                             <div class="w-full md:w-1/2 px-3">
                               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="jenis_barang">
                                 Jenis Barang
                               </label>
-                              <input class="border border-black appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" value="<?= $item["jenis_barang"]; ?>" id="jenis_barang" name="jenis_barang" required type="text">
+                              <input class="border border-black appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" value="Makanan" id="jenis_barang" name="jenis_barang" required type="text">
                             </div>
                           </div>
                         </div>
                         
-                        <button type="submit" name="submit" class="-mt-3 btn bg-[#F65A83] text-black hover:text-white rounded-btn">Update Data!</button>
+                        <a href="data.html" type="submit" name="submit" class="-mt-3 btn bg-[#F65A83] text-black hover:text-white rounded-btn">Update Data!</a>
                     </div>
                   </form>
             </div>
